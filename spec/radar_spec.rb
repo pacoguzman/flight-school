@@ -11,7 +11,7 @@ RSpec.describe Radar, ".status_for" do
     end
 
     subject(:status) do
-      Radar.status_for("JFK")
+      Radar.status_for("GFK")
     end
 
     it "has a IATA code" do
