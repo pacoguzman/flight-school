@@ -1,5 +1,3 @@
-require "webmock/rspec"
-
 require "radar"
 
 RSpec.describe Radar, ".status_for" do

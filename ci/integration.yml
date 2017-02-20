@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  myredis:
+    image: redis:alpine
+    container_name: myredis
+
+  myelastic:
+    image: elasticsearch:2
+    container_name: myelastic
+
+  mymysql:
+    image: mysql:5.6
+    container_name: mymysql
+
+  tests:
+    image: ruby:2.3.0
+    container_name: mytests
+    depends_on:
+      - myredis
+      - myelastic
+      - mymysql
+    command: "date"
